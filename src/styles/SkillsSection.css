@@ -1,0 +1,94 @@
+/* Skills Section Container */
+.skills-section {
+  padding: 80px 20px;
+  background-color: #f3f3f3;
+  position: relative;
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+/* Skills Grid Layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Skill Card Styles */
+.skill-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Skill Content */
+.skill-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Skill Icon */
+.skill-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+/* Skill Name */
+.skill-name {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Skill Description */
+.skill-description {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .section-title {
+      font-size: 2rem;
+  }
+
+  .skills-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .skill-card {
+      padding: 15px;
+  }
+
+  .skill-name {
+      font-size: 1rem;
+  }
+
+  .skill-description {
+      font-size: 0.8rem;
+  }
+}

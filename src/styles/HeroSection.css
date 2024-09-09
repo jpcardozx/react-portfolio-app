@@ -1,0 +1,90 @@
+/* Hero Section Styles */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* Animation for hero content */
+  .hero-content {
+    background-color: rgba(240, 248, 255, 0.773);
+    padding: 48px;
+    border-radius: 25px;
+    max-width: 650px;
+    opacity: 0.5;
+    transform: translateY(50px);
+    animation: fadeInUp 1.5s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Advanced Typography */
+  .hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.466);
+    animation: fadeIn 1.2s ease-in forwards;
+  }
+  
+  .hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    color: rgba(0, 0, 0, 0.9);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.485);
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+    animation: fadeIn 1.5s ease-in forwards 0.5s;
+  }
+  
+  /* Call-to-Action Button */
+  .cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #b05718;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 8px 16px rgba(80, 10, 10, 0.623);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: fadeIn 1.7s ease-in forwards 0.8s;
+  }
+  
+  .cta-button:hover {
+    background-color: #ff4a4a;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(255, 107, 107, 0.6);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero-content p {
+      font-size: 1rem;
+    }
+  
+    .cta-button {
+      font-size: 1rem;
+      padding: 12px 24px;
+    }
+  }
+  
