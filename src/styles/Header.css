@@ -1,6 +1,6 @@
 .header {
   background-color: #ffffff35; /* Cor de fundo mais escura */
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   color: #000000; /* Cor do texto mais clara */
   border-bottom: 1px solid #ddd;
 }
@@ -21,6 +21,13 @@
 .logo img {
   width: 190px; /* Ajuste o tamanho da logo */
   height: auto;
+  opacity: 0.83;
+}
+
+.logo img:hover {
+  opacity: 1; /* Opacidade ao passar o mouse */
+  scale: 1.1; /* Aumenta o tamanho ao passar o mouse */
+  transition: 0.3s;
 }
 
 .nav {
