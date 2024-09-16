@@ -1,109 +1,144 @@
+/* Estilização principal da seção de projetos */
 .featured-projects {
-    padding: 5rem 2rem;
-    background-color: #f8fafc;
-    text-align: center;
-  }
-  
-  .section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 2.5rem;
-  }
-  
-  /* Use Grid for Better Layout Control */
+  padding: 4rem 2rem;
+  background-color: #f8fafc;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Contêiner de projetos */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card do projeto - agora em coluna com imagem no topo */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Contêiner da imagem agora ocupa 100% da largura */
+.project-image-container {
+  width: 100%;
+  height: auto; /* Definindo uma altura padrão para a imagem */
+  overflow: hidden;
+  position: relative;
+}
+
+/* Estilização da imagem - preenchendo o contêiner */
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorcer */
+  transition: transform 0.3s ease;
+  object-position: center;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+/* Conteúdo do projeto fica abaixo da imagem */
+.project-content {
+  padding: 2rem;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-name {
+  font-size: 1.75rem;
+  color: #1e2a45;
+  margin-bottom: 0.2rem;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Estilização das tecnologias usadas no projeto */
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+
+/* Link do projeto */
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  width: fit-content;
+  margin: 0;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #1d4ed8;
+}
+
+.arrow-icon {
+  margin-left: 0.5rem;
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
   .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    flex-direction: column;
     gap: 2rem;
-    justify-content: center;
-    align-items: start;
   }
-  
-  .project-card {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    text-align: left;
-    position: relative;
-    max-width: 50vw;
-    margin: 0 auto;
+
+  .project-image-container {
+    height: 200px; /* Ajuste a altura para telas menores */
   }
-  
-  /* Subtle Elevation on Hover */
-  .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Add hover effect to image */
-  .project-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.3s ease, filter 0.3s ease;
-  }
-  
-  /* Zoom and desaturate image on hover */
-  .project-card:hover .project-image {
-    transform: scale(1.05);
-    filter: grayscale(20%);
-  }
-  
+
   .project-content {
     padding: 1.5rem;
   }
-  
-  .project-name {
-    font-size: 1.75rem;
-    margin-bottom: 0.5rem;
-    color: #007bff;
-    font-weight: 600;
-    transition: color 0.3s ease;
+}
+
+@media (min-width: 1200px) {
+  .project-card {
+    flex-direction: column; /* Garante que a imagem sempre fique acima do conteúdo */
   }
-  
-  .project-card:hover .project-name {
-    color: #0056b3;
-  }
-  
-  .project-description {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-  
-  /* Stylize the project link */
-  .project-link {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: #007bff;
-    color: #ffffff;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background-color 0.3s, box-shadow 0.3s;
-  }
-  
-  .project-link:hover {
-    background-color: #0056b3;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Responsive Enhancements */
-  @media (max-width: 768px) {
-    .project-card {
-      width: 100%;
-    }
-  
-    .project-image {
-      height: 180px;
-    }
-  
-    .project-name {
-      font-size: 1.5rem;
-    }
-  }
-  
+}
