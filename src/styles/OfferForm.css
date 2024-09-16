@@ -39,13 +39,14 @@
   
   .form-title {
     font-size: 2.5rem;
-    color: rgba(255, 255, 255, 0.807);
+    color: rgba(118, 74, 58, 0.807);
     margin-bottom: 25px;
     text-align: center;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-weight: 700;
-    background: linear-gradient(90deg, rgba(8, 18, 84, 0.807), rgba(56, 75, 202, 0.8));
+    background: linear-gradient(90deg, rgba(118, 74, 58, 0.807), rgba(255, 136, 0, 0.8));
+    -webkit-background-clip: text;
     color: transparent;
   }
   
@@ -91,6 +92,11 @@
     box-shadow: 0 0 15px rgba(118, 74, 58, 0.3);
   }
   
+.offer-form > h3 {
+  font-size: 1rem;
+  font-weight: 450;
+}
+
   /* Submit Button */
   .cta-btn {
     display: block;
@@ -108,7 +114,7 @@
   }
   
   .cta-btn:hover {
-    background-color: rgba(118, 74, 58, 1);
+    background-color: rgb(255, 255, 255);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
   

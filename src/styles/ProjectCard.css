@@ -27,8 +27,12 @@
 }
 
 .project-info {
-  padding: 20px;
-  text-align: center;
+  padding: 4px;
+  text-align: justify;
+  line-height: 1.4;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .project-info h3 {
@@ -40,15 +44,17 @@
 .project-info p {
   font-size: 1rem;
   color: #777;
-  margin-bottom: 15px;
+  margin-bottom: 24px;
 }
 
 .view-more {
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: #220c3e;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 1ch;
+  font-weight: 750;
+  margin: 0 auto;
   font-size: 1rem;
   transition: background-color 0.3s ease;
 }

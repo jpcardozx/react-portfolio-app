@@ -44,6 +44,8 @@ const OfferForm: React.FC = () => {
     <div className="form-container">
       <form onSubmit={handleSubmit} className="offer-form">
         <h2 className="form-title">Send an Offer</h2>
+        <h3>This is a portfolio project crafted on React + Typescrybt by @jpcardozx.</h3>
+        <h3>If you need help with some some web development issue, submit this form and I'll reach you out.</h3>
         <div className="form-group">
           <label htmlFor="name">Name</label>
           <input

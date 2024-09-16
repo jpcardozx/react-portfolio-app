@@ -5,15 +5,16 @@ import '/src/styles/ProjectList.css';
 const ProjectCard = React.lazy(() => import('./ProjectCard'));
 
 const projects = [
-  { id: 1, title: "Social Links Profile", description: "An intuitive profile page designed to consolidate all your important social links in one place. Perfect for boosting online presence and engagement.", imageUrl: "/images/ravenous.png" },
-  { id: 2, title: "Product Ad | UI/UX Design", description: "A visually captivating product ad landing page, crafted with a focus on UI/UX best practices to drive user engagement and conversion rates.", imageUrl: "/images/landingpage.png" },
-  { id: 3, title: "Testimonials Grid | Advanced CSS", description: "An elegant grid layout that showcases client testimonials, utilizing advanced CSS techniques to create a visually appealing and responsive design.", imageUrl: "/images/todo.png" },
+  { id: 1, title: "Social Links Profile", description: "An intuitive profile page designed to centralize your essential social media links in one responsive, easy-to-navigate space. Perfect for enhancing your online presence and boosting engagement.", imageUrl: "https://github.com/jpcardozx/react-portfolio-app/blob/main/src/assets/social-media-links.png?raw=true" },
+  { id: 2, title: "Product Ad | UI/UX Design", description: "A highly optimized product ad landing page, built with a focus on user engagement and lead conversion. This design combines modern UI/UX principles for a smooth and effective experience.", imageUrl: "https://github.com/jpcardozx/react-portfolio-app/blob/main/src/assets/ad-prvw.png?raw=true" },
+  { id: 3, title: "Testimonials Grid | Advanced CSS", description: "A sleek, responsive grid showcasing client testimonials using advanced CSS. This layout enhances credibility and fits seamlessly across all screen sizes, perfect for businesses highlighting social proof.", imageUrl: "https://github.com/jpcardozx/react-portfolio-app/blob/main/src/assets/tgrid.png?raw=true" },
+  { id: 4, title: "Blog Preview Card | CSS Flexbox", description: "A customizable blog preview card, designed to highlight key content elements such as publication dates and author info. Built with Flexbox for a responsive and modern presentation.", imageUrl: ""}
 ];
 
 const ProjectList: React.FC = () => {
   return (
     <>
-      <h2>Single Component | HTML & CSS @frontendmentor Projects</h2>
+      <h2 className='section-title'>Single Component | HTML & CSS @frontendmentor Projects</h2>
       <section id="projects" className="project-list">
         <Suspense fallback={<div>Loading projects...</div>}>
           {projects.map((project) => (
