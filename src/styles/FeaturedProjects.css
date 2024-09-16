@@ -1,101 +1,115 @@
 /* Estilização principal da seção de projetos */
 .featured-projects {
-  padding: 4rem 2rem;
-  background-color: #f8fafc;
+  padding: 6rem 2rem;
+  background-color: #f0f4f8;
 }
 
+/* Título da seção */
 .section-title {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 700;
   color: #333;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
 }
 
 /* Contêiner de projetos */
 .projects-container {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5rem;
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
-/* Card do projeto - agora em coluna com imagem no topo */
+/* Card do projeto */
 .project-card {
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
+  background-color: #ffffffd5;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.369);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 480px;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
+  padding: 1.5rem;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Contêiner da imagem agora ocupa 100% da largura */
+/* Contêiner da imagem */
 .project-image-container {
   width: 100%;
-  height: auto; /* Definindo uma altura padrão para a imagem */
+  height: 300px; /* Ajuste de altura para mais impacto */
   overflow: hidden;
   position: relative;
+  border-radius: 10px;
 }
 
-/* Estilização da imagem - preenchendo o contêiner */
+/* Estilização da imagem */
 .project-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorcer */
-  transition: transform 0.3s ease;
+  object-fit: cover;
+  transition: transform 0.4s ease;
   object-position: center;
+  border-radius: 10px;
 }
 
 .project-card:hover .project-image {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
-/* Conteúdo do projeto fica abaixo da imagem */
+/* Conteúdo do projeto */
 .project-content {
-  padding: 2rem;
-  padding-top: 0;
+  padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
 }
 
 .project-name {
-  font-size: 1.75rem;
+  font-size: 1.85rem;
   color: #1e2a45;
-  margin-bottom: 0.2rem;
+  margin: 0;
+  font-weight: 600;
 }
 
 .project-description {
   font-size: 1rem;
   color: #4b5563;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: -0.6rem;;
 }
 
-/* Estilização das tecnologias usadas no projeto */
+/* Estilização das tecnologias usadas */
 .project-technologies {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  gap: 0.6rem;
+  margin-bottom: 0;
 }
 
 .tech-tag {
-  background-color: #e0f2fe;
-  color: #0369a1;
-  padding: 0.25rem 0.75rem;
+  background-color: #dbeafe;
+  color: #1e40af;
+  padding: 0.3rem 1rem;
   border-radius: 9999px;
   font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-tag:hover {
+  background-color: #60a5fa;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Link do projeto */
@@ -104,17 +118,17 @@
   align-items: center;
   background-color: #2563eb;
   color: #ffffff;
-  padding: 0.75rem 1.5rem;
+  padding: 0.85rem 1.75rem;
   width: fit-content;
-  margin: 0;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .project-link:hover {
   background-color: #1d4ed8;
+  transform: translateY(-2px);
 }
 
 .arrow-icon {
@@ -123,22 +137,15 @@
 
 /* Ajustes de responsividade */
 @media (max-width: 768px) {
-  .projects-container {
-    flex-direction: column;
-    gap: 2rem;
+  .section-title {
+    font-size: 2.3rem;
   }
 
   .project-image-container {
-    height: 200px; /* Ajuste a altura para telas menores */
+    height: 200px;
   }
 
   .project-content {
     padding: 1.5rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .project-card {
-    flex-direction: column; /* Garante que a imagem sempre fique acima do conteúdo */
   }
 }

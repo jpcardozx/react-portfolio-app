@@ -7,9 +7,17 @@ const FeaturedProjects = () => {
       name: 'Spotify - Playlists Explorer',
       description: 'In this project, I built a web application that allows users to search for playlists on Spotify using the Spotify API. The user can search for playlists by entering a search term and clicking the search button. The application will then display a list of playlists that match the search term. The user can click on a playlist to view more details about the playlist, including the playlist name, description, and tracks.',
       imageUrl: 'https://github.com/jpcardozx/react-portfolio-app/blob/main/src/assets/spotify-banner.png?raw=true',
-      technologies: ['React', 'JavaScript', 'Spotify API', 'CSS'],
+      technologies: ['React', 'TypeScript', 'Spotify API', 'Figma', 'CSS'],
       link: 'https://github.com/jpcardozx/ravenous'
     },
+    {
+      name: 'SEO Optimized Landing Page | Conversion Boost 🚀',
+      description: 'A modern, SEO-optimized real estate landing page built with React, TypeScript, and advanced UI/UX principles to enhance user engagement and boost conversions. The project features a responsive design, smooth animations, and an intuitive interface that seamlessly guides users through property listings. Key functionalities include dynamic content rendering, parallax effects, and a sleek CTA for lead generation.',
+      imageUrl: 'https://github.com/jpcardozx/react-portfolio-app/blob/main/src/assets/realestate.png?raw=true',
+      technologies: ['React', 'TypeScript', 'Figma', 'UI/UX Design', 'CSS'],
+      link: 'https://github.com/jpcardozx/ravenous'
+    }
+
     // Add more projects here
   ];
 

@@ -5,21 +5,23 @@ import '/src/styles/ProjectList.css';
 const ProjectCard = React.lazy(() => import('./ProjectCard'));
 
 const projects = [
-  { id: 1, title: "Ravenous", description: "Restaurant recommendation website with Yelp API.", imageUrl: "/images/ravenous.png" },
-  { id: 2, title: "Optimized Landing Page", description: "Landing page optimized for lead generation and SEO.", imageUrl: "/images/landingpage.png" },
-  { id: 3, title: "To-Do List App", description: "Simple task management app with local data persistence.", imageUrl: "/images/todo.png" },
-  { id: 4, title: "Weather App", description: "Real-time weather app with API integration.", imageUrl: "/images/weather.png" }
+  { id: 1, title: "Social Links Profile", description: "An intuitive profile page designed to consolidate all your important social links in one place. Perfect for boosting online presence and engagement.", imageUrl: "/images/ravenous.png" },
+  { id: 2, title: "Product Ad | UI/UX Design", description: "A visually captivating product ad landing page, crafted with a focus on UI/UX best practices to drive user engagement and conversion rates.", imageUrl: "/images/landingpage.png" },
+  { id: 3, title: "Testimonials Grid | Advanced CSS", description: "An elegant grid layout that showcases client testimonials, utilizing advanced CSS techniques to create a visually appealing and responsive design.", imageUrl: "/images/todo.png" },
 ];
 
 const ProjectList: React.FC = () => {
   return (
-    <section id="projects" className="project-list">
-      <Suspense fallback={<div>Loading projects...</div>}>
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
-      </Suspense>
-    </section>
+    <>
+      <h2>Single Component | HTML & CSS @frontendmentor Projects</h2>
+      <section id="projects" className="project-list">
+        <Suspense fallback={<div>Loading projects...</div>}>
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </Suspense>
+      </section>
+    </>
   );
 }
 
