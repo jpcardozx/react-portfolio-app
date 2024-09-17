@@ -18,7 +18,7 @@
     background-color: rgba(240, 248, 255, 0.773);
     padding: 48px;
     border-radius: 25px;
-    max-width: 650px;
+    max-width: 750px;
     opacity: 0.5;
     transform: translateY(50px);
     animation: fadeInUp 1.5s ease-out forwards;
@@ -33,23 +33,25 @@
   
   /* Advanced Typography */
   .hero-content h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-family: 'Poppins', sans-serif;
     line-height: 1.2;
+    margin-top: 1rem;
     margin-bottom: 20px;
-    font-weight: 850;
+    font-weight: 700;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.244);
     animation: fadeIn 1.2s ease-in forwards;
   }
   
   .hero-content p {
-    font-size: 1.25rem;
-    margin-bottom: 40px;
+    width: 90%;
+    font-size: 1.35rem;
     color: rgba(0, 0, 0, 0.9);
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.485);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.469);
     max-width: 800px;
     margin: 0 auto 40px auto;
-    line-height: 1.6;
+    margin-bottom: 24px;
+    line-height: 1.85;
     animation: fadeIn 1.5s ease-in forwards 0.5s;
   }
   
@@ -57,20 +59,21 @@
   .cta-button {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #b05718;
+    background-color: #631e09da;
     color: white;
     font-size: 1.2rem;
     text-decoration: none;
     border-radius: 50px;
     box-shadow: 0 8px 16px rgba(80, 10, 10, 0.623);
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.9s ease, transform 0.3s ease;
     animation: fadeIn 1.7s ease-in forwards 0.8s;
   }
   
   .cta-button:hover {
-    background-color: #ff4a4a;
+    background-color: #6e1909e0;
+    scale: 1.05;
     transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(255, 107, 107, 0.6);
+    box-shadow: 0 12px 24px rgba(23, 11, 86, 0.752);
   }
   
   /* Responsive adjustments */
