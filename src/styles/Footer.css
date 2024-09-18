@@ -1,22 +1,109 @@
 .footer {
-    padding: 1rem 2rem;
-    background-color: #333;
-    color: white;
+  background-image: url('https://images.unsplash.com/photo-1484557052118-f32bd25b45b5?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.606);
+  z-index: 1;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  flex-shrink: 0;
+}
+
+.footer-logo img {
+  width: 250px;
+  height: auto;
+}
+
+.footer-text {
+  text-align: center;
+  flex-grow: 1;
+  padding: 0 2rem;
+}
+
+.footer-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-description {
+  font-size: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.footer-cta {
+  flex-shrink: 0;
+}
+
+.get-in-touch-btn {
+  background-color: #e67e22;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.get-in-touch-btn:hover {
+  background-color: #d35400;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
     text-align: center;
   }
-  
-  .social-links {
-    margin-top: 1rem;
+
+  .footer-logo,
+  .footer-text,
+  .footer-cta {
+    margin-bottom: 2rem;
   }
-  
-  .social-links a {
-    margin: 0 1rem;
-    color: white;
-    font-size: 1.5rem;
-    text-decoration: none;
+
+  .footer-logo img {
+    width: 120px;
   }
-  
-  .social-links a:hover {
-    color: #007bff;
+
+  .footer-title {
+    font-size: 1.75rem;
   }
-  
+
+  .footer-description {
+    font-size: 0.9rem;
+  }
+}

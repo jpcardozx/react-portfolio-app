@@ -1,21 +1,27 @@
 import React from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import '/src/styles/Footer.css';
 
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
-      <p>© 2024 MyPortfolio. All rights reserved.</p>
-      <div className="social-links">
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin />
-        </a>
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-          <FaGithub />
-        </a>
-        <a href="mailto:contact@myportfolio.com">
-          <FaEnvelope />
-        </a>
+      <div className="footer-content">
+        <div className="footer-logo">
+          <img 
+            src="https://github.com/jpcardozx/react-portfolio-app/blob/main/src/assets/white-logo.png?raw=true" 
+            alt="Your Company Logo" 
+          />
+        </div>
+        <div className="footer-text">
+          <h2 className="footer-title">Portfolio Web App | @jpcardozx</h2>
+          <p className="footer-description">
+            This is a Portfolio App built with React and TypeScript by me.
+          </p>
+        </div>
+        <div className="footer-cta">
+          <a href="https://jpcardozx.github.io/social-links-profile/" target="_blank" rel="noopener noreferrer">
+            <button className="get-in-touch-btn">Get in Touch</button>
+          </a>
+        </div>
       </div>
     </footer>
   );
