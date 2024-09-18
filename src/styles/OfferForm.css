@@ -3,17 +3,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 0px;
     background-color: #f7f7f7;
     min-height: 100vh;
   }
   
   /* Form Styling */
   .offer-form {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 40px;
+    background: rgba(15, 8, 44, 0.035);
+    padding: 70px;
     border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.323);
     max-width: 600px;
     width: 100%;
     animation: fadeIn 1s ease forwards;
@@ -40,6 +40,7 @@
   .form-title {
     font-size: 2.5rem;
     color: rgba(118, 74, 58, 0.807);
+    margin-top: 10px;
     margin-bottom: 25px;
     text-align: center;
     letter-spacing: 1.5px;

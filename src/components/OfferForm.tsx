@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, forwardRef } from 'react';
 import '../styles/OfferForm.css';
-import { FaCheckCircle } from 'react-icons/fa'; // Ícone de sucesso
+import { FaCheckCircle } from 'react-icons/fa'; // Success icon
 
-const OfferForm: React.FC = () => {
+const OfferForm = forwardRef<HTMLDivElement>((_, ref) => { // Use "_" to ignore the unused props
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     offer: '',
   });
 
-  const [status, setStatus] = useState(''); // Status de envio
+  const [status, setStatus] = useState(''); // Form submission status
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,7 +18,7 @@ const OfferForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Usando FormData ao invés de JSON
+    // Using FormData instead of JSON
     const formDataToSend = new FormData();
     formDataToSend.append('name', formData.name);
     formDataToSend.append('email', formData.email);
@@ -33,19 +33,19 @@ const OfferForm: React.FC = () => {
     });
 
     if (response.ok) {
-      setStatus('success'); // Definindo status para sucesso
-      setFormData({ name: '', email: '', offer: '' }); // Limpando o formulário
+      setStatus('success'); // Set status to success
+      setFormData({ name: '', email: '', offer: '' }); // Clear form fields
     } else {
-      setStatus('error'); // Definindo status para erro
+      setStatus('error'); // Set status to error
     }
   };
 
   return (
-    <div className="form-container">
+    <div className="form-container" ref={ref}>
       <form onSubmit={handleSubmit} className="offer-form">
         <h2 className="form-title">Send an Offer</h2>
-        <h3>This is a portfolio project crafted on React + Typescrybt by @jpcardozx.</h3>
-        <h3>If you need help with some some web development issue, submit this form and I'll reach you out.</h3>
+        <h3>This is a portfolio project crafted on React + TypeScript by @jpcardozx.</h3>
+        <h3>If you need help with any web development issues, submit this form and I'll reach out to you.</h3>
         <div className="form-group">
           <label htmlFor="name">Name</label>
           <input
@@ -84,7 +84,7 @@ const OfferForm: React.FC = () => {
         </button>
       </form>
 
-      {/* Mensagem de feedback visual */}
+      {/* Feedback message */}
       {status === 'success' && (
         <div className="success-message">
           <FaCheckCircle className="success-icon" /> Your offer has been successfully sent!
@@ -93,6 +93,6 @@ const OfferForm: React.FC = () => {
       {status === 'error' && <p className="error-message">There was an error sending your offer. Please try again.</p>}
     </div>
   );
-};
+});
 
 export default OfferForm;

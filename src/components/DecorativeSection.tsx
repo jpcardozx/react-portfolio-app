@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/DecorativeSection.css';
 import { FaCheckCircle } from 'react-icons/fa';
 
-const DecorativeSection: React.FC = () => {
+const DecorativeSection: React.FC<{ scrollToForm: () => void }> = ({ scrollToForm }) => {
   return (
     <section className="decorative-section">
       <div className="decorative-overlay"></div>
@@ -28,8 +28,8 @@ const DecorativeSection: React.FC = () => {
           </li>
         </ul>
         <div className="cta-container">
-          <a href="#contact" className="cta-button primary-cta">Let’s Talk</a>
-          <a href="#learn-more" className="cta-button secondary-cta">Discover More</a>
+          <button onClick={scrollToForm} className="cta-button primary-cta">Let’s Talk</button>
+          <button onClick={scrollToForm} className="cta-button secondary-cta">Discover More</button>
         </div>
       </div>
     </section>

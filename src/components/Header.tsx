@@ -20,10 +20,10 @@ const Header: React.FC = () => {
 		<nav className={`nav ${menuOpen ? 'open' : ''}`}>
 		  <ul>
 			<li><Link to="/">Home</Link></li>
-			<li><a href="#projects">Projects</a></li>
-			<li><Link to="/blog">Trends</Link></li>
-			<li><a href="#skills">Skills</a></li>
-			<li><a href="#contact">Contact</a></li>
+			<li><a href="">Projects</a></li>
+			<li><a>Trends</a></li>
+			<li><a href="">Skills</a></li>
+			<li><a href="">Contact</a></li>
 		  </ul>
 		</nav>
 		<button className="menu-toggle" onClick={toggleMenu}>
