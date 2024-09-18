@@ -30,7 +30,7 @@ const projects = [
     id: 4,
     title: "Blog Preview Card | CSS Flexbox",
     description: "A customizable blog preview card, designed to highlight key content elements such as publication dates and author info. Built with Flexbox for a responsive and modern presentation.",
-    imageUrl: "",
+    imageUrl: "https://github.com/jpcardozx/react-portfolio-app/blob/main/src/assets/blog-prvw.png?raw=true",
     linkUrl: "https://jpcardozx.github.io/blog-preview/"
   }
 ];
