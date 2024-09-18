@@ -18,7 +18,7 @@
     background-color: rgba(240, 248, 255, 0.773);
     padding: 48px;
     border-radius: 25px;
-    max-width: 750px;
+    max-width: 650px;
     opacity: 0.5;
     transform: translateY(50px);
     animation: fadeInUp 1.5s ease-out forwards;
@@ -59,21 +59,22 @@
   .cta-button {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #631e09da;
+    background-color: hsl(28, 66%, 40%);
     color: white;
     font-size: 1.2rem;
     text-decoration: none;
     border-radius: 50px;
-    box-shadow: 0 8px 16px rgba(80, 10, 10, 0.623);
+    box-shadow: 0 8px 16px rgba(80, 10, 10, 0.412);
     transition: background-color 0.9s ease, transform 0.3s ease;
     animation: fadeIn 1.7s ease-in forwards 0.8s;
+    border: none;
   }
   
   .cta-button:hover {
-    background-color: #6e1909e0;
-    scale: 1.05;
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(23, 11, 86, 0.752);
+    background-color: #0b1651;
+    transition: all 0.3s ease;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px hsla(28, 66%, 40%, 0.538);
   }
   
   /* Responsive adjustments */

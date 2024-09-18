@@ -1,149 +1,169 @@
 /* Form Container */
 .form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-    background-color: #f7f7f7;
-    min-height: 100vh;
-  }
-  
-  /* Form Styling */
-  .offer-form {
-    background: rgba(15, 8, 44, 0.035);
-    padding: 70px;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.323);
-    max-width: 600px;
-    width: 100%;
-    animation: fadeIn 1s ease forwards;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-  }
-  
-  .offer-form:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-  }
-  
-  /* Animation for the form entry */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .form-title {
-    font-size: 2.5rem;
-    color: rgba(118, 74, 58, 0.807);
-    margin-top: 10px;
-    margin-bottom: 25px;
-    text-align: center;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-weight: 700;
-    background: linear-gradient(90deg, rgba(118, 74, 58, 0.807), rgba(255, 136, 0, 0.8));
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-  
-  /* Form Explanation */
-  .form-explanation {
-    font-size: 1.1rem;
-    color: rgba(50, 50, 50, 0.85);
-    text-align: center;
-    margin-bottom: 30px;
-    opacity: 0.85;
-    font-style: italic;
-  }
-  
-  /* Form Group */
-  .form-group {
-    margin-bottom: 25px;
-  }
-  
-  .form-group label {
-    font-size: 1.1rem;
-    color: #333;
-    display: block;
-    margin-bottom: 10px;
-    font-weight: 500;
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    font-size: 1rem;
-    background-color: #f9f9f9;
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-  }
-  
-  .form-group input:focus,
-  .form-group textarea:focus {
-    outline: none;
-    border-color: rgba(118, 74, 58, 0.8);
-    box-shadow: 0 0 15px rgba(118, 74, 58, 0.3);
-  }
-  
-.offer-form > h3 {
-  font-size: 1rem;
-  font-weight: 450;
+  display: flex;
+  flex-direction: column; /* Colocando elementos em coluna */
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  background-color: #f7f7f7;
+  min-height: 100vh;
 }
 
-  /* Submit Button */
+/* Offer Form */
+.offer-form {
+  background: rgba(15, 8, 44, 0.035);
+  padding: 70px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.323);
+  max-width: 600px;
+  width: 100%;
+  animation: fadeIn 1s ease forwards;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  margin-bottom: 20px; /* Espaço inferior para as mensagens de feedback */
+}
+
+.offer-form:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Form Title */
+.form-title {
+  font-size: 2.5rem;
+  color: rgba(118, 74, 58, 0.807);
+  margin-top: 10px;
+  margin-bottom: 25px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: linear-gradient(90deg, rgba(118, 74, 58, 0.807), rgba(255, 136, 0, 0.8));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Form Explanation */
+h3 {
+  font-size: 1rem;
+  font-weight: 450;
+  color: rgba(50, 50, 50, 0.85);
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0.85;
+  font-style: italic;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  font-size: 1.1rem;
+  color: #333;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: rgba(118, 74, 58, 0.8);
+  box-shadow: 0 0 15px rgba(118, 74, 58, 0.3);
+}
+
+/* Submit Button */
+.cta-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  background-color: rgba(118, 74, 58, 0.9);
+  color: white;
+  text-align: center;
+}
+
+.cta-btn:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgba(118, 74, 58, 0.9);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Success Message */
+.success-message {
+  color: green;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-icon {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  font-size: 1rem;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .offer-form {
+    padding: 30px;
+  }
+
+  .form-title {
+    font-size: 2rem;
+  }
+
   .cta-btn {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    transition: all 0.4s ease;
-    cursor: pointer;
-    background-color: rgba(118, 74, 58, 0.9);
-    color: white;
-    text-align: center;
+    font-size: 1rem;
+    padding: 12px 20px;
   }
-  
-  .cta-btn:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgba(118, 74, 58, 0.9);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  .success-message,
+  .error-message {
+    font-size: 1rem;
   }
-  
-  /* Responsividade */
-  @media screen and (max-width: 768px) {
-    .offer-form {
-      padding: 30px;
-    }
-  
-    .form-title {
-      font-size: 2rem;
-    }
-  
-    .cta-btn {
-      font-size: 1rem;
-      padding: 12px 20px;
-    }
+}
+
+@media screen and (max-width: 480px) {
+  .form-title {
+    font-size: 1.8rem;
   }
-  
-  @media screen and (max-width: 480px) {
-    .form-title {
-      font-size: 1.8rem;
-    }
-  
-    .cta-btn {
-      font-size: 0.9rem;
-      padding: 10px 15px;
-    }
+
+  .cta-btn {
+    font-size: 0.9rem;
+    padding: 10px 15px;
   }
-  
+
+  .success-message,
+  .error-message {
+    font-size: 0.9rem;
+  }
+}

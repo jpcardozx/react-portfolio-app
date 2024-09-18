@@ -26,6 +26,11 @@ const Header: React.FC = () => {
 			<li><a href="">Contact</a></li>
 		  </ul>
 		</nav>
+		<div className="footer-cta">
+          <a href="https://calendly.com/joaopaula00/30min?back=1&month=2024-09" target="_blank" rel="noopener noreferrer">
+            <button className="get-in-touch-btn">Schedule a Call!</button>
+          </a>
+        </div>
 		<button className="menu-toggle" onClick={toggleMenu}>
 		  &#9776; {/* Ícone de menu */}
 		</button>

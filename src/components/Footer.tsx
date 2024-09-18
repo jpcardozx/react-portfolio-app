@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
           </p>
         </div>
         <div className="footer-cta">
-          <a href="https://jpcardozx.github.io/social-links-profile/" target="_blank" rel="noopener noreferrer">
+          <a href="https://jpcardozx.github.io/contact/" target="_blank" rel="noopener noreferrer">
             <button className="get-in-touch-btn">Get in Touch</button>
           </a>
         </div>
