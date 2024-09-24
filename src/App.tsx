@@ -10,10 +10,11 @@ import FeaturedProjects from './components/FeaturedProjects';
 import DecorativeSection from './components/DecorativeSection';
 import OfferForm from './components/OfferForm';
 import BlogPage from './pages/BlogPage';
+import ServicesPage from './pages/ServicesPage'; // Importar a nova página
 import './styles/App.css';
 
 const App: React.FC = () => {
-  const formRef = useRef<HTMLDivElement>(null); // Create a ref for OfferForm
+  const formRef = useRef<HTMLDivElement>(null);
 
   const scrollToForm = () => {
     formRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -31,17 +32,16 @@ const App: React.FC = () => {
                 <>
                   <Hero />
                   <FeaturedProjects />
-                  {/* Pass scrollToForm to DecorativeSection */}
                   <DecorativeSection scrollToForm={scrollToForm} />
                   <SkillsSection />
                   <ProjectList />
-                  {/* Attach ref to OfferForm */}
                   <OfferForm ref={formRef} />
                 </>
               }
             />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/project/:id" element={<ProjectDetails />} />
+            <Route path="/services" element={<ServicesPage />} /> {/* Nova rota para Serviços */}
           </Routes>
         </main>
         <Footer />

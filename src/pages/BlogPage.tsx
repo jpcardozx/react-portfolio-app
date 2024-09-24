@@ -26,9 +26,8 @@ const articles = [
 const BlogPage: React.FC = () => {
   return (
     <>
-      <Header />
       <section className="blog-page">
-        <h2 className="section-title">Interesting News</h2>
+        <h2 className="section-title">Trending News on Tech Industry</h2>
         <div className="articles-container">
           {articles.map((article, index) => (
             <div key={index} className="article-card">

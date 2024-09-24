@@ -1,6 +1,6 @@
 .header {
   background-color: #ffffff00; /* Cor de fundo mais escura */
-  padding: 1.5rem 2rem;
+  padding: 2.0rem 10rem;
   color: #000000; /* Cor do texto mais clara */
   border-bottom: 1px solid #ddd;
 }
@@ -9,7 +9,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -19,7 +18,7 @@
 }
 
 .logo img {
-  width: 190px; /* Ajuste o tamanho da logo */
+  width: 220px; /* Ajuste o tamanho da logo */
   height: auto;
   opacity: 0.83;
 }
@@ -37,7 +36,7 @@
 .nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 3.5rem;
 }
 
 .nav a {
@@ -49,7 +48,11 @@
 }
 
 .nav a:hover {
-  color: #08407d; /* Cor de destaque ao passar o mouse */
+  color: #ffffff; /* Cor de destaque ao passar o mouse */
+  background-color: rgba(99, 41, 22, 0.854);
+  padding: 15px;
+  border-radius: 12px;
+  transition: 0.3s;
 }
 
 .menu-toggle {

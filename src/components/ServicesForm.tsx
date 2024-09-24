@@ -1,8 +1,8 @@
 import React, { useState, forwardRef } from 'react';
-import '../styles/OfferForm.css';
+import '../styles/ServicesForm.css'; // Updated CSS file name
 import { FaCheckCircle } from 'react-icons/fa'; // Success icon
 
-const OfferForm = forwardRef<HTMLDivElement>((_, ref) => { // Use "_" to ignore the unused props
+const ServicesForm = forwardRef<HTMLDivElement>((_, ref) => { // Updated component name
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -41,11 +41,8 @@ const OfferForm = forwardRef<HTMLDivElement>((_, ref) => { // Use "_" to ignore 
   };
 
   return (
-    <div className="form-container" ref={ref}>
-      <form onSubmit={handleSubmit} className="offer-form">
-        <h2 className="form-headline">Send an Offer</h2>
-        <h3>This is a portfolio project crafted on React + TypeScript by @jpcardozx.</h3>
-        <h3>If you need help with any web development issues, submit this form and I'll reach out to you.</h3>
+    <div className="services-form-container" ref={ref}> {/* Updated class name */}
+      <form onSubmit={handleSubmit} className="services-form"> {/* Updated class name */}
         <div className="form-group">
           <label htmlFor="name">Name</label>
           <input
@@ -57,6 +54,7 @@ const OfferForm = forwardRef<HTMLDivElement>((_, ref) => { // Use "_" to ignore 
             required
           />
         </div>
+
         <div className="form-group">
           <label htmlFor="email">Email</label>
           <input
@@ -68,6 +66,7 @@ const OfferForm = forwardRef<HTMLDivElement>((_, ref) => { // Use "_" to ignore 
             required
           />
         </div>
+
         <div className="form-group">
           <label htmlFor="offer">Your Offer</label>
           <textarea
@@ -79,6 +78,7 @@ const OfferForm = forwardRef<HTMLDivElement>((_, ref) => { // Use "_" to ignore 
             required
           />
         </div>
+
         <button type="submit" className="cta-btn primary-btn">
           Send Offer
         </button>
@@ -86,13 +86,16 @@ const OfferForm = forwardRef<HTMLDivElement>((_, ref) => { // Use "_" to ignore 
 
       {/* Feedback message */}
       {status === 'success' && (
-        <div className="success-message">
-          <FaCheckCircle className="success-icon" /> Your offer has been successfully sent!
+        <div className="services-success-message">
+          <FaCheckCircle className="services-success-icon" /> {/* Updated class name */}
+          Your offer has been successfully sent!
         </div>
       )}
-      {status === 'error' && <p className="error-message">There was an error sending your offer. Please try again.</p>}
+      {status === 'error' && (
+        <p className="services-error-message">There was an error sending your offer. Please try again.</p>
+      )}
     </div>
   );
 });
 
-export default OfferForm;
+export default ServicesForm; // Updated export name

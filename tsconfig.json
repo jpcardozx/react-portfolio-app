@@ -1,7 +1,21 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "target": "es6",                            // Define a versão do ECMAScript, ES6 é uma boa escolha
+    "lib": ["dom", "dom.iterable", "esnext"],   // Inclui bibliotecas DOM e ECMAScript, perfeito para React
+    "allowJs": true,                            // Permite a inclusão de arquivos JavaScript, útil se você tiver arquivos .js junto com .ts/.tsx
+    "skipLibCheck": true,                       // Pula a verificação de tipos em bibliotecas externas, pode acelerar a compilação
+    "esModuleInterop": true,                    // Suporte para módulos ES6, permite usar sintaxes `import` e `require` de maneira intercambiável
+    "allowSyntheticDefaultImports": true,       // Permite importar padrões mesmo quando não há uma exportação padrão no módulo
+    "strict": true,                             // Ativa todas as verificações de tipo estritas, uma boa prática para evitar erros
+    "forceConsistentCasingInFileNames": true,   // Garante que nomes de arquivos sejam usados com a mesma capitalização
+    "moduleResolution": "node",                 // Resolve módulos da mesma forma que o Node.js, recomendável para ambientes React
+    "isolatedModules": true,                    // Verifica cada arquivo como um módulo isolado, obrigatório para compilação em tempo de execução do Babel
+    "noEmit": true,                             // Não emite arquivos .js ou .jsx na compilação, útil quando o TypeScript só é usado para verificação de tipos
+    "jsx": "react-jsx",                         // Suporte para o novo runtime JSX do React (React 17+)
+    "module": "esnext",                         // Define o sistema de módulos mais moderno (ESNext)
+    "resolveJsonModule": true,                  // Permite importar arquivos JSON como módulos
+    "incremental": true                         // Permite a compilação incremental para melhorar a performance
+  },
+  "include": ["src"],                           // Inclui todos os arquivos dentro da pasta "src"
+  "exclude": ["node_modules"]                   // Exclui a pasta "node_modules" da verificação de tipos
 }
