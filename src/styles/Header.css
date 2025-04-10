@@ -1,8 +1,8 @@
 .header {
-  background-color: #ffffff00; /* Cor de fundo mais escura */
-  padding: 2.0rem 10rem;
+  padding: 1rem 8rem;
   color: #000000; /* Cor do texto mais clara */
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ffffff;
+  background-color: #b4666600;
 }
 
 .container {
@@ -10,6 +10,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  background-color: #fafafa00;
 }
 
 .logo {
@@ -18,15 +19,16 @@
 }
 
 .logo img {
-  width: 220px; /* Ajuste o tamanho da logo */
+  width: 205px; /* Ajuste o tamanho da logo */
   height: auto;
-  opacity: 0.83;
+  opacity: 0.8;
 }
 
 .logo img:hover {
   opacity: 1; /* Opacidade ao passar o mouse */
   scale: 1.1; /* Aumenta o tamanho ao passar o mouse */
-  transition: 0.3s;
+  transition: 0.5s ease-in-out;
+  filter: brightness(1.2); /* Aumenta o brilho ao passar o mouse */
 }
 
 .nav {
@@ -36,7 +38,8 @@
 .nav ul {
   list-style: none;
   display: flex;
-  gap: 3.5rem;
+  gap: 3.5rem; /* Espaçamento entre os itens do menu */
+  margin: 0;
 }
 
 .nav a {
@@ -44,7 +47,8 @@
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
-  transition: color 0.6s;
+  transition: color 1s; /* Transição suave para a cor do texto */
+  padding: 15px;
 }
 
 .nav a:hover {
@@ -52,7 +56,8 @@
   background-color: rgba(99, 41, 22, 0.854);
   padding: 15px;
   border-radius: 12px;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
 }
 
 .menu-toggle {
@@ -63,7 +68,8 @@
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start ; /* Alinha os itens à esquerda */
+    padding: 1rem; /* Adiciona um pouco de espaçamento interno */
   }
 
   .nav {

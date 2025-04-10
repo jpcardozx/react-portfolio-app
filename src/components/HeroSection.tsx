@@ -13,16 +13,16 @@ const HeroSection: React.FC = () => {
   return (
     <section className="hero-section">
       <div className="hero-content">
-        <h1>Building Future-Ready Digital Experiences 🚀</h1>
+        <h1>Building Digital Experiences focused on Lead Generation/Conversion</h1>
         <p>
-          Hello, I'm Pedro Cardozo (@jpcardox), a front-end developer committed to transforming ideas into high-performance, responsive, and visually stunning web solutions.
+          Hello, I'm Pedro (@jpcardox), a web developer committed to transforming ideas into high-performance, responsive, and visually stunning solutions.
         </p>
         <p>
-          With expertise in React, Figma, and TypeScript, we can build dynamic, scalable user experiences designed to captivate users and build trust through quality craftsmanship.
+          With expertise in React and other frameworks we can build dynamic user experiences designed to captivate users and build trust through top-tier digital experiences that effectively appear on Google, since we apply SEO review in every piece of code!
         </p>
         {/* Alterado para um botão que executa a rolagem suave */}
         <button onClick={scrollToProjects} className="cta-button">
-          Explore My Work
+          Check My Work
         </button>
       </div>
     </section>
