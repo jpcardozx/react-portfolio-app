@@ -2,7 +2,7 @@
 .hero-section {
     position: relative;
     height: 100vh;
-    background-image: url('https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-image: url('../public/images/heroBackground.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -16,7 +16,7 @@
   /* Animation for hero content */
   .hero-content {
     background-color: rgba(240, 248, 255, 0.773);
-    padding: 24px;
+    padding: 48px;
     border-radius: 25px;
     max-width: 650px;
     opacity: 0.8;
@@ -64,7 +64,7 @@
     font-size: 1.2rem;
     text-decoration: none;
     border-radius: 50px;
-    box-shadow: 0 8px 16px rgba(26, 255, 26, 0.412);
+    box-shadow: 0 8px 16px rgba(255, 0, 0, 0.184);
     transition: background-color 0.9s ease, transform 0.3s ease;
     animation: fadeIn 1.7s ease-in forwards 0.8s;
     border: none;
@@ -74,7 +74,7 @@
     background-color: #0b1651;
     transition: all 0.3s ease;
     transform: translateY(-2px);
-    box-shadow: 0 6px 8px hsla(28, 66%, 40%, 0.538);
+    box-shadow: 0 6px 8px hsla(111, 100%, 52%, 0.308);
   }
   
   /* Responsive adjustments */

@@ -1,5 +1,5 @@
 .footer {
-  background-image: url('https://images.unsplash.com/photo-1484557052118-f32bd25b45b5?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-image: url(/public/images/footerLogo.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -63,7 +63,7 @@
 }
 
 .get-in-touch-btn {
-  background-color: hsl(253, 66%, 40%);
+  background-color: hsl(0, 0%, 0%);
   color: #fff;
   border: none;
   padding: 12px 24px;
@@ -78,7 +78,7 @@
 }
 
 .get-in-touch-btn:hover {
-  background-color: #0b514a;
+  background-color: #0b06366e;
   transition: all 0.3s ease;
   transform: translateY(-2px);
   box-shadow: 0 6px 8px hsla(28, 66%, 40%, 0.538);
