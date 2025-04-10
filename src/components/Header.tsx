@@ -14,7 +14,7 @@ const Header: React.FC = () => {
 	  <div className="container">
 		<div className="logo">
 		  <Link to="/">
-			<img src='https://github.com/jpcardozx/react-portfolio-app/blob/main/src/assets/newLogo.png?raw=true' alt="Logo" />
+			<img src='/public/images/jpcardozoLogo.png' alt="Logo" />
 		  </Link>
 		</div>
 		<nav className={`nav ${menuOpen ? 'open' : ''}`}>
