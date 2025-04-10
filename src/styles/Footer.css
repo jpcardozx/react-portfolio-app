@@ -1,11 +1,11 @@
 .footer {
-  background-image: url(/public/images/footerLogo.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   color: #fff;
   padding: 4rem 2rem;
   position: relative;
+  background-image: src('./images/footerBackground.png');
 }
 
 .footer::before {

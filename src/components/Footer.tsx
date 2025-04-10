@@ -6,9 +6,10 @@ const Footer: React.FC = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-logo">
-          <img 
-            src="https://github.com/jpcardozx/react-portfolio-app/blob/main/src/assets/white-logo.png?raw=true" 
-            alt="Your Company Logo" 
+          <img
+            src="./images/jpcardozoLogo-v2.png"
+            className="footer-logo-image"
+            alt="Logo"
           />
         </div>
         <div className="footer-text">
